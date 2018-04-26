@@ -36,11 +36,8 @@ class ServicesController < ApplicationController
     else
       @points = @service.points.where(status: 'approved')
     end
-
     @rating = @service.rating_for_view
-
     @versions = @service.versions
-
     if @query = params[:topic]
       @points = @points.where(topic_id: params[:topic][:id])
     end
@@ -72,7 +69,7 @@ class ServicesController < ApplicationController
   end
 
   def service_params
-    params.require(:service).permit(:name, :url, :query)
+    params.require(:service).permit(:name, :url, :wikipedia, :query)
   end
 
   def set_curator
