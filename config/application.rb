@@ -34,5 +34,6 @@ module Phoenix
     config.generators.system_tests = nil
     config.action_view.embed_authenticity_token_in_remote_forms = true
     config.action_mailer.raise_delivery_errors = false
+    config.middleware.use(StackProf::Middleware, enabled:true, mode: :wall, interval: 1000, save_every: 5)
   end
 end
