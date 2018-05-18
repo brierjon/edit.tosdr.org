@@ -37,7 +37,7 @@ group :development, :test do
   gem 'flamegraph'
   gem 'stackprof'
   gem 'memory_profiler'
-  gem 'rack-mini-profiler'
+  gem 'rack-mini-profiler', require: false
 end
 
 group :production do
