@@ -25,6 +25,8 @@ gem 'uglifier'
 gem 'formtastic'
 gem 'pundit'
 gem 'paper_trail'
+gem 'derailed_benchmarks'
+gem 'stackprof'
 
 group :development, :test do
   gem 'pry-byebug'
@@ -35,11 +37,11 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'bullet'
   gem 'flamegraph'
-  gem 'stackprof'
   gem 'memory_profiler'
   gem 'rack-mini-profiler', require: false
 end
 
 group :production do
   gem 'heroku-deflater'
+  gem 'rails_12factor' 
 end
